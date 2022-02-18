@@ -51,5 +51,5 @@
   * 查看机房 ---- 查看所有机房的信息
   * 清空预约 ---- 清空所有预约记录
 
-# Order_System_2 是对Order_System的代码的一些优化
+# Order_System_2 是对Order_System的优化
 
