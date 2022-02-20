@@ -36,7 +36,7 @@ Widget::Widget(QWidget *parent) :
     // 默认输入
     ui->name_edit->setText("root");
     ui->password_edit->setEchoMode(QLineEdit::Password);
-    ui->password_edit->setText("123");
+    ui->password_edit->setText("hjh123789");
     ui->choose_edit->setText("text");
 
 
@@ -204,15 +204,13 @@ void Widget::on_add_btn_clicked()
         QString tmp_sql(sql);
         for(QMap<QLabel*,QLineEdit*>::const_iterator it = map.begin();it != map.end();it++)
         {
-            tmp_sql = tmp_sql + it.value()->text();
+            tmp_sql = tmp_sql + it.value()->text() + ",";
         }
 
-//        qDebug() << tmp_sql;
-
-
         tmp_sql = tmp_sql.left(tmp_sql.length() - 1) + ");";
-
         qDebug() << tmp_sql;
+
+//        qDebug() << tmp_sql;
 
         // 执行sql添加语句
         QSqlQuery query;
